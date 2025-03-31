@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SA Weather App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-app">
+       
+        <div class="app-header">
+            <div class="sa-flag">
+                <div class="flag-green"></div>
+                <div class="flag-white">
+                    <div class="flag-yellow"></div>
+                    <div class="flag-black"></div>
+                    <div class="flag-blue"></div>
+                    <div class="flag-red"></div>
+                </div>
+                <div class="flag-blue"></div>
+            </div>
+            <h1>South Africa Weather</h1>
+        </div>
+
+        
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Search SA city...">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+            <button id="location-btn"><i class="fas fa-location-arrow"></i></button>
+        </div>
+
+
+        <div class="current-weather">
+            <div class="weather-main">
+                <div class="weather-icon" id="weather-icon">
+                    <i class="fas fa-sun"></i>
+                </div>
+                <h1 id="city-name">Johannesburg</h1>
+                <div class="temp">22<span>°C</span></div>
+                <div class="description">Sunny</div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span><i class="fas fa-tint"></i> Humidity</span>
+                    <span id="humidity">65%</span>
+                </div>
+                <div class="detail">
+                    <span><i class="fas fa-wind"></i> Wind</span>
+                    <span id="wind">12 km/h</span>
+                </div>
+                <div class="detail">
+                    <span><i class="fas fa-temperature-low"></i> Feels Like</span>
+                    <span id="feels-like">24°C</span>
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="map-container">
+            <div id="map"></div>
+            <div class="map-overlay">South Africa Weather Map</div>
+        </div>
+
+        
+        <div class="forecast">
+            <h2><i class="fas fa-calendar-alt"></i> 5-Day Forecast</h2>
+            <div class="forecast-cards" id="forecast-cards">
+                <!-- Forecast cards will be inserted here by JavaScript -->
+                <div class="forecast-card">
+                    <div>Mon</div>
+                    <i class="fas fa-sun"></i>
+                    <div>24°C</div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Major SA Cities Quick Access -->
+        <div class="quick-cities">
+            <h2>Major SA Cities</h2>
+            <div class="city-buttons">
+                <button data-city="Johannesburg">Joburg</button>
+                <button data-city="Cape Town">Cape Town</button>
+                <button data-city="Durban">Durban</button>
+                <button data-city="Pretoria">Pretoria</button>
+                <button data-city="Port Elizabeth">PE</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
