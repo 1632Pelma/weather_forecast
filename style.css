@@ -1,0 +1,119 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+:root {
+    --primary: #4361ee;
+    --dark: #212529;
+    --light: #f8f9fa;
+    --glass: rgba(255, 255, 255, 0.1);
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: var(--light);
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-app {
+    background: var(--glass);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#city-input {
+    flex: 1;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+#city-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#search-btn {
+    background: var(--primary);
+    border: none;
+    border-radius: 12px;
+    padding: 0 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s;
+}
+
+#search-btn:hover {
+    transform: scale(1.05);
+}
+
+.current-weather {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.weather-main .temp {
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.weather-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.detail {
+    display: flex;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+#map {
+    height: 200px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    z-index: 1;
+}
+
+.forecast h2 {
+    margin-bottom: 15px;
+}
+
+.forecast-cards {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 12px;
+    min-width: 120px;
+    text-align: center;
+}
