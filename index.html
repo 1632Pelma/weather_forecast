@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weather App</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="weather-app">
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="city-input" placeholder="Search city...">
+            <button id="search-btn"><i class="search-icon">🔍</i></button>
+        </div>
+
+        <!-- Current Weather -->
+        <div class="current-weather">
+            <div class="weather-main">
+                <h1 id="city-name">New York</h1>
+                <div class="temp">22<span>°C</span></div>
+                <div class="description">Sunny</div>
+            </div>
+            <div class="weather-details">
+                <div class="detail">
+                    <span>💧 Humidity</span>
+                    <span>65%</span>
+                </div>
+                <div class="detail">
+                    <span>🌬️ Wind</span>
+                    <span>12 km/h</span>
+                </div>
+                <div class="detail">
+                    <span>🌡️ Feels Like</span>
+                    <span>24°C</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Map -->
+        <div id="map"></div>
+
+        <!-- 5-Day Forecast -->
+        <div class="forecast">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-cards" id="forecast-cards"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
